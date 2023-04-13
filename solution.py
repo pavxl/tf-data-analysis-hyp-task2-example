@@ -8,7 +8,7 @@ def solution(x: np.array, y: np.array) -> bool:
     result = cramervonmises_2samp(x, y)
     statistic, pvalue = result.statistic, result.pvalue
     alpha = 0.01
-    if pvalue < alpha:
+    if pvalue > alpha:
         return True
     else:
         return False
