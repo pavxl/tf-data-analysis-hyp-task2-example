@@ -5,4 +5,6 @@ from scipy.stats import anderson_ksamp
 chat_id = 362844815
 
 def solution(x: np.array, y: np.array) -> bool:
-    return anderson_ksamp([x, y]).pvalue <= 0.01
+    p_value = ttest_ind(x, y, alternative="greater").pvalue
+
+    return p_value < 0.03
