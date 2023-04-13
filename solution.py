@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from scipy.stats import anderson_ksamp
+from scipy.stats import ttest_ind
 
 chat_id = 362844815
 
